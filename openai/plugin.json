@@ -1,0 +1,38 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "humanizer",
+  "version": "3.1.0",
+  "description": "Rewrite AI-sounding text so it reads like the writer without changing what it says.",
+  "author": {
+    "name": "AsleepForNow"
+  },
+  "homepage": "https://github.com/AsleepForNow/humanizer",
+  "repository": "https://github.com/AsleepForNow/humanizer",
+  "license": "MIT",
+  "keywords": [
+    "humanizer",
+    "writing",
+    "editing",
+    "中文润色",
+    "去AI腔"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Humanizer",
+        "shortDescription": "中英文去 AI 腔，保留原意与个人语气",
+        "longDescription": "基于 Humanizer 3.1.0 的 26 类文字改写规则，润色中文和英文，减少模板句式、空话、夸大表达和机械排版。保留原文事实、引用和作者语气；支持提供写作样本。默认展示初稿、简短自查和最终稿，也可要求只输出最终稿。插件仅包含技能，无外部 MCP、API Key 或服务器依赖；不承诺通过 AI 检测。原作者：Siqi Chen（blader）；ChatGPT 插件打包：AsleepForNow。",
+        "developerName": "AsleepForNow",
+        "category": "Productivity",
+        "capabilities": [],
+        "defaultPrompt": [
+          "把下面的文字改得自然些，保留事实、引用和我的语气，只输出最终稿。",
+          "检查这段文字的 AI 腔，给出初稿、简短自查和最终稿。",
+          "Use my writing sample to humanize the following text without changing its facts."
+        ],
+        "logo": "./assets/humanizer.svg",
+        "composerIcon": "./assets/humanizer.svg"
+      }
+    }
+  }
+}

@@ -48,6 +48,33 @@ The plugin answers to `/humanizer:humanizer`. It needs Claude Code 2.1.142 or ne
 npx skills add blader/humanizer --global --agent codex
 ```
 
+### ChatGPT personal plugin
+
+This fork includes an OpenAI portable plugin manifest in `openai/plugin.json`.
+Build a skills-only plugin from the root skill:
+
+```bash
+python3 scripts/package-openai-plugin.py --output ../humanizer-3.1.0-chatgpt.zip
+```
+
+The archive contains the manifest, the unchanged skill, its agent metadata,
+an icon, and the MIT license. It needs no API key, MCP server, or separate
+hosting. Import the archive through a supported personal-plugin upload flow.
+Building an archive does not install it in your ChatGPT account.
+
+安装后选择 **Humanizer**，粘贴要润色的文本即可。例如：
+
+```text
+把下面的文字改得自然些，保留事实、引用和我的语气，只输出最终稿。
+
+[粘贴文本]
+```
+
+You can also supply a writing sample or request the original draft, critique,
+and final rewrite workflow. Humanizer edits prose for readers and does not
+promise to pass AI detectors. Source credit: Siqi Chen (`blader/humanizer`);
+ChatGPT packaging: AsleepForNow.
+
 ### Claude.ai and Claude Desktop
 
 Download this repository as a ZIP (**Code → Download ZIP**) and upload it as a skill in Settings.
@@ -207,3 +234,4 @@ See [CHANGELOG.md](CHANGELOG.md).
 MIT
 
 If Humanizer helps you, a star helps other people find it.
+

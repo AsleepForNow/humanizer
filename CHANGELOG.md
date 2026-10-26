@@ -2,6 +2,8 @@
 
 ## 3.1.0
 
+- This fork adds a ChatGPT portable-plugin export script, Chinese listing and usage instructions, and a packaged icon. The exported skill matches the root SKILL.md exactly.
+
 - Added pattern #26 and section F for replies that re-explain context the reader already has (#269). It acts on replies, not standalone writing. 26 patterns total.
 - Extended the core rule so "something the reader did not already have" counts the surrounding conversation, not only earlier text.
 - Widened #25 to text that describes its own sourcing, assembly, or layout (#290), and added headings written for effect to #20.
@@ -114,3 +116,4 @@ Rewrote the skill from the Wikipedia source.
 ## 1.0.0
 
 First release.
+
